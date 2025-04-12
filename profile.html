@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vasileios Gkolfos | CS Student</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-family: 'Courier New', monospace;
+            font-weight: 700;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1.2rem;
+            background: #e74c3c;
+            animation: blink 1s infinite;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+        
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        
+        section {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 1rem;
+        }
+        
+        h2 {
+            color: #3498db;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .skill {
+            background: #e0f7fa;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .certification {
+            background: #e8f5e9;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .additional-skills ul {
+            padding-left: 1.2rem;
+        }
+        
+        .additional-skills li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .powered-by {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.8rem;
+            color: #95a5a6;
+            font-family: 'Courier New', monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Vasileios Gkolfos</h1>
+        <div class="tagline">Computer Science Student<span class="cursor"></span></div>
+    </header>
+
+    <section>
+        <h2>Contact</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                📍 Vyron, Athens
+            </div>
+            <div class="contact-item">
+                📞 (+30) 6982871602
+            </div>
+            <div class="contact-item">
+                ✉️ golfosb@gmail.com
+            </div>
+            <div class="contact-item">
+                🎓 sdi2300032@uoa.gr
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <p><strong>University of Athens</strong><br>
+        BSc in Informatics & Telecommunications<br>
+        2023 - Present</p>
+        
+        <p><strong>High School Diploma</strong><br>
+        Complete secondary education<br>
+        Graduated 2023 - Grade: 19.4/20</p>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <div class="skills">
+            <div class="skill">C/C++</div>
+            <div class="skill">Python (Begginer)</div>
+            <div class="skill">Algorithms</div>
+            <div class="skill">Data Structures</div>
+            <div class="skill">OOP</div>
+            <div class="skill">Problem Solving</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Languages</h2>
+        <div class="certification">
+            <strong>English Language Certification</strong><br>
+            Michigan University - Level C2 (Proficiency)
+        </div>
+        <div class="certification">
+            <strong>Greek Language</strong><br>
+            Native language
+        </div>
+    </section>
+
+    <section class="additional-skills">
+        <h2>Additional Competencies</h2>
+        <ul>
+            <li>Expert MS Windows systems user (all versions)</li>
+            <li>Mobile platform proficiency (Android & iOS)</li>
+            <li>Knowledge of Git and Linux</li>
+            <li>Category B driver's license</li>
+        </ul>
+    </section>
+
+    <script>
+        // Make cursor blink continuously
+        const cursor = document.querySelector('.cursor');
+        setInterval(() => {
+            cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
+        }, 500);
+    </script>
+</body>
+</html>
