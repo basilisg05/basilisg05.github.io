@@ -3,113 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vasileios Gkolfos | CS Student</title>
+    <title>Vasileios Gkolfos</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.5;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 2rem;
-            color: #333;
-            background-color: #f8f8f8;
+            padding: 3rem 1.5rem;
+            color: #1a1a1a;
+            background-color: #fafafa;
         }
-        
+
         header {
-            text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
-        
+
         h1 {
-            color: #2c3e50;
-            margin-bottom: 0.5rem;
-            font-family: 'Courier New', monospace;
-            font-weight: 700;
+            font-size: 2rem;
+            font-weight: 450;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.25rem;
+            color: #000;
         }
-        
+
         .tagline {
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            color: #666;
+            font-weight: 350;
         }
-        
+
         .cursor {
             display: inline-block;
-            width: 10px;
-            height: 1.2rem;
-            background: #e74c3c;
-            animation: blink 1s infinite;
+            width: 2px;
+            height: 1rem;
+            background: #000;
+            margin-left: 6px;
             vertical-align: middle;
-            margin-left: 5px;
+            opacity: 0.7;
         }
-        
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
-        }
-        
+
         section {
-            margin-bottom: 2rem;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 1rem;
+            margin-bottom: 2.5rem;
         }
-        
+
         h2 {
-            color: #3498db;
-            border-left: 4px solid #3498db;
-            padding-left: 10px;
-            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #888;
+            margin-bottom: 1.25rem;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 0.5rem;
         }
-        
+
         .contact-info {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
-            margin: 1rem 0;
+            gap: 1.5rem 2.5rem;
+            font-size: 0.95rem;
+            color: #333;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.4rem;
         }
-        
+
+        p {
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+            color: #2a2a2a;
+        }
+
+        p strong {
+            font-weight: 550;
+            color: #000;
+        }
+
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 0.5rem 0.75rem;
         }
-        
+
         .skill {
-            background: #e0f7fa;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
             font-size: 0.9rem;
-            font-family: 'Courier New', monospace;
+            color: #2a2a2a;
+            padding: 0.2rem 0;
         }
-        
+
+        .skill:not(:last-child)::after {
+            content: "·";
+            color: #bbb;
+            margin-left: 0.75rem;
+            font-weight: 300;
+        }
+
         .certification {
-            background: #e8f5e9;
-            padding: 1rem;
-            border-radius: 5px;
-            margin-top: 1rem;
-            font-family: 'Courier New', monospace;
-        }
-        
-        .additional-skills ul {
-            padding-left: 1.2rem;
-        }
-        
-        .additional-skills li {
             margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #2a2a2a;
         }
-        
+
+        .certification strong {
+            font-weight: 550;
+            color: #000;
+        }
+
+        .additional-skills ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .additional-skills li {
+            font-size: 0.95rem;
+            color: #2a2a2a;
+            margin-bottom: 0.4rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .additional-skills li::before {
+            content: "—";
+            color: #bbb;
+            position: absolute;
+            left: 0;
+        }
+
         .powered-by {
-            text-align: center;
-            margin-top: 2rem;
-            font-size: 0.8rem;
-            color: #95a5a6;
-            font-family: 'Courier New', monospace;
+            display: none;
+        }
+
+        /* Subtle hover */
+        .contact-item:hover {
+            color: #000;
+            transition: color 0.2s ease;
+        }
+
+        /* Very minimal animation */
+        @keyframes subtleBlink {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 0.2; }
+        }
+
+        .cursor {
+            animation: subtleBlink 2s infinite;
         }
     </style>
 </head>
@@ -122,18 +169,10 @@
     <section>
         <h2>Contact</h2>
         <div class="contact-info">
-            <div class="contact-item">
-                📍 Vyron, Athens
-            </div>
-            <div class="contact-item">
-                📞 (+30) 6982871602
-            </div>
-            <div class="contact-item">
-                ✉️ golfosb@gmail.com
-            </div>
-            <div class="contact-item">
-                🎓 sdi2300032@uoa.gr
-            </div>
+            <div class="contact-item">Vyron, Athens</div>
+            <div class="contact-item">(+30) 6982871602</div>
+            <div class="contact-item">golfosb@gmail.com</div>
+            <div class="contact-item">sdi2300032@uoa.gr</div>
         </div>
     </section>
 
@@ -141,39 +180,37 @@
         <h2>Education</h2>
         <p><strong>University of Athens</strong><br>
         BSc in Informatics & Telecommunications<br>
-        2023 - Present</p>
+        2023 – Present</p>
         
         <p><strong>High School Diploma</strong><br>
         Complete secondary education<br>
-        Graduated 2023 - Grade: 19.4/20</p>
+        Graduated 2023 · Grade: 19.4/20</p>
     </section>
 
     <section>
         <h2>Skills</h2>
         <div class="skills">
-            <div class="skill">C/C++</div>
-            <div class="skill">Python (Begginer)</div>
-            <div class="skill">Algorithms</div>
-            <div class="skill">Data Structures</div>
-            <div class="skill">OOP</div>
-            <div class="skill">Problem Solving</div>
+            <span class="skill">C/C++</span>
+            <span class="skill">Python (Beginner)</span>
+            <span class="skill">Algorithms</span>
+            <span class="skill">Data Structures</span>
+            <span class="skill">OOP</span>
+            <span class="skill">Problem Solving</span>
         </div>
     </section>
 
     <section>
         <h2>Languages</h2>
         <div class="certification">
-            <strong>English Language Certification</strong><br>
-            Michigan University - Level C2 (Proficiency)
+            <strong>English</strong> · Michigan University — Level C2 (Proficiency)
         </div>
         <div class="certification">
-            <strong>Greek Language</strong><br>
-            Native language
+            <strong>Greek</strong> · Native language
         </div>
     </section>
 
     <section class="additional-skills">
-        <h2>Additional Competencies</h2>
+        <h2>Additional</h2>
         <ul>
             <li>Expert MS Windows systems user (all versions)</li>
             <li>Mobile platform proficiency (Android & iOS)</li>
@@ -181,13 +218,5 @@
             <li>Category B driver's license</li>
         </ul>
     </section>
-
-    <script>
-        // Make cursor blink continuously
-        const cursor = document.querySelector('.cursor');
-        setInterval(() => {
-            cursor.style.opacity = cursor.style.opacity === '0' ? '1' : '0';
-        }, 500);
-    </script>
 </body>
 </html>
